@@ -11,6 +11,10 @@ an ''ami_type_prefer_hvm'' and an ''ami_type_prefer_pv'',
 You can then use this in your AMI lookup module to work out which
 AMI you need
 
+Data in this module is generated from:
+
+    https://github.com/powdahound/ec2instances.info/blob/master/www/instances.json
+
 Use this in your terraform code like this:
 
     module "amitype" {
