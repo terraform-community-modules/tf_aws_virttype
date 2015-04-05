@@ -18,7 +18,7 @@ Data in this module is generated from:
 Use this in your terraform code like this:
 
     module "amitype" {
-        source = "github.com/tdoran/terraform-amitype"
+        source = "github.com/bobtfish/terraform-amitype"
         instance_type = "m3.xlarge"
     }
 
