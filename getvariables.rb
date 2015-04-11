@@ -12,10 +12,10 @@ ami_types = Hash[JSON.parse(http.request(request).body).map { |tuple| [tuple['in
 
 output = {
  "variable" => {
-    "all_ami_types_prefer_pv" => {
+    "prefer_pv" => {
       "default" => Hash[ami_types.map { |k, v| [k, v.include?('PV') ? 'pv' : 'hvm'] }]
     },
-    "all_ami_types_prefer_hvm" => {
+    "prefer_hvm" => {
       "default" => Hash[ami_types.map { |k, v| [k, v.include?('HVM') ? 'hvm' : 'pv'] }]
     }
   }
