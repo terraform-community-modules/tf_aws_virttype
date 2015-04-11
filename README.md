@@ -1,5 +1,4 @@
-terraform-amitype
-=================
+# tf_aws_virttype
 
 Simple terraform module to allow you to look up the type of AMI
 you need to use for a particular instance type.
@@ -9,7 +8,7 @@ an ''ami_type_prefer_hvm'' and an ''ami_type_prefer_pv'',
  which will contain either 'hvm' or 'pv'.
 
 You can then use this in your AMI lookup module to work out which
-AMI you need
+AMI you need.
 
 Data in this module is generated from:
 
@@ -17,14 +16,14 @@ Data in this module is generated from:
 
 Use this in your terraform code like this:
 
-    module "amitype" {
-        source = "github.com/bobtfish/terraform-amitype"
+    module "virttype" {
+        source = "github.com/terraform-community-modules/tf_aws_virttype"
         instance_type = "m3.xlarge"
     }
 
 And you can then reference:
 
-    "${module.amitype.ami_type_prefer_hvm}"
+    "${module.virttypetype.ami_type_prefer_hvm}"
 
 which will return either 'hvm' or 'pv'
 
