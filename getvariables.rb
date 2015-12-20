@@ -8,7 +8,7 @@ http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
 request = Net::HTTP::Get.new(uri.request_uri)
 res = http.request(request)
-ami_types = Hash[JSON.parse(http.request(request).body).map { |tuple| [tuple['instance_type'], tuple['linux_virtualization_types']] }]
+ami_types = Hash[JSON.parse(res.body).map { |tuple| [tuple['instance_type'], tuple['linux_virtualization_types']] }]
 
 output = {
  "variable" => {
