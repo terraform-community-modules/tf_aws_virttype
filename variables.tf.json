@@ -1,6 +1,7 @@
 {
   "variable": {
     "prefer_pv": {
+      "description": "If an instance type supports PV, should return 'pv', else 'hvm'",
       "default": {
         "m1.small": "pv",
         "m1.medium": "pv",
@@ -43,6 +44,7 @@
         "c3.8xlarge": "pv",
         "g2.2xlarge": "hvm",
         "g2.8xlarge": "hvm",
+        "x1.32xlarge": "hvm",
         "r3.large": "hvm",
         "r3.xlarge": "hvm",
         "r3.2xlarge": "hvm",
@@ -59,6 +61,7 @@
       }
     },
     "prefer_hvm": {
+      "description": "If an instance type supports HVM, should return 'hvm', else 'pv'",
       "default": {
         "m1.small": "pv",
         "m1.medium": "pv",
@@ -67,11 +70,11 @@
         "c1.medium": "pv",
         "c1.xlarge": "pv",
         "cc2.8xlarge": "hvm",
-        "cg1.4xlarge": "pv",
+        "cg1.4xlarge": "hvm",
         "m2.xlarge": "pv",
         "m2.2xlarge": "pv",
         "m2.4xlarge": "pv",
-        "cr1.8xlarge": "hvm",
+        "cr1.8xlarge": "pv",
         "hi1.4xlarge": "hvm",
         "hs1.8xlarge": "hvm",
         "t1.micro": "pv",
@@ -99,8 +102,9 @@
         "c3.2xlarge": "hvm",
         "c3.4xlarge": "hvm",
         "c3.8xlarge": "hvm",
-        "g2.2xlarge": "pv",
-        "g2.8xlarge": "pv",
+        "g2.2xlarge": "hvm",
+        "g2.8xlarge": "hvm",
+        "x1.32xlarge": "hvm",
         "r3.large": "hvm",
         "r3.xlarge": "hvm",
         "r3.2xlarge": "hvm",
