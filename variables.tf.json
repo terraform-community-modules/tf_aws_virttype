@@ -1,6 +1,7 @@
 {
   "variable": {
     "prefer_pv": {
+      "description": "If an instance type supports PV, should return 'pv', else 'hvm'",
       "default": {
         "m1.small": "pv",
         "m1.medium": "pv",
@@ -59,6 +60,7 @@
       }
     },
     "prefer_hvm": {
+      "description": "If an instance type supports HVM, should return 'hvm', else 'pv'",
       "default": {
         "m1.small": "pv",
         "m1.medium": "pv",
