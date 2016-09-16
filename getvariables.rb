@@ -13,10 +13,12 @@ ami_types = Hash[JSON.parse(res.body).map { |tuple| [tuple['instance_type'], tup
 output = {
  "variable" => {
     "prefer_pv" => {
+      "type" => "map",
       "description" => "If an instance type supports PV, should return 'pv', else 'hvm'",
       "default" => Hash[ami_types.map { |k, v| [k, v.include?('PV') ? 'pv' : 'hvm'] }]
     },
     "prefer_hvm" => {
+      "type" => "map",
       "description" => "If an instance type supports HVM, should return 'hvm', else 'pv'",
       "default" => Hash[ami_types.map { |k, v| [k, v.include?('HVM') ? 'hvm' : 'pv'] }]
     }
